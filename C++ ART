@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int height;
+
+    // Ask the user for the height of the pyramid
+    cout << "Enter the height of the pyramid: ";
+    cin >> height;
+
+    // Outer loop for the number of rows (height)
+    for (int i = 1; i <= height; i++) {
+        // Inner loop for spaces before the stars (left padding)
+        for (int j = 1; j <= height - i; j++) {
+            cout << " ";  // Print space to create pyramid shape
+        }
+        
+        // Inner loop for printing stars
+        for (int j = 1; j <= 2 * i - 1; j++) {
+            cout << "*";  // Print stars
+        }
+
+        // Move to the next line after each row
+        cout << endl;
+    }
+
+    return 0;
+}
